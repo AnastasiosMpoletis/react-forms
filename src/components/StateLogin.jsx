@@ -18,6 +18,8 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault(); //prevents the default browser behaviour (send HTTP request)
     console.log('User values: ' + JSON.stringify(enteredValues));
+
+    //TODO we also need validation on submit also
   }
 
   function handleInputChange(identifier, value) {

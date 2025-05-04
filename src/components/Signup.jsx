@@ -17,6 +17,12 @@ export default function Signup() {
     const data = Object.fromEntries(formData.entries());
     data.acquisition = acquisitionChannel;
     console.log(data)
+
+    /**
+     * We can reset the form here also.
+     * It still changes the DOM directly (which is a bad practise in React), but it is better than reseting a lot of refs.
+     */
+    // event.target.reset();
   }
 
   return (
@@ -106,6 +112,7 @@ export default function Signup() {
       </div>
 
       <p className="form-actions">
+        {/** With type="reset", inputs automatically reset.  */}
         <button type="reset" className="button button-flat">
           Reset
         </button>
